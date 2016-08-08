@@ -37,7 +37,7 @@ emote - such as /cry or /wave
 random - anything
 target - if something is targeted
 
-Version 1.2
+Version 1.12
 Updated to Legion
 Included updates from Acidfrost59
 Big thanks to Acidfrost59 for adding many more emotes and fixing some minor issues!

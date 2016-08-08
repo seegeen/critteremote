@@ -167,6 +167,14 @@ function CritterEmote_GetTargetPetsOwner()
                                 CritterEmoteScanTooltip:SetUnit("target")       
                                 local text = CritterEmoteScanTooltipTextLeft2:GetText()
                                 if text then
+                                 if StrExtractCompanionOwner(text) then
+                                  text = CritterEmoteScanTooltipTextLeft2:GetText()
+                                 else
+                                  text = CritterEmoteScanTooltipTextLeft3:GetText()
+                                end
+                               end
+                                CritterEmote_printDebug("1st text = " .. text)
+                                if text then
                                         return StrExtractCompanionOwner(text)
                                 else
                                         CritterEmote_printDebug("\tText from ScanTooltip returned nil.")
@@ -174,7 +182,15 @@ function CritterEmote_GetTargetPetsOwner()
                                         CritterEmoteScanTooltip:SetOwner( WorldFrame, "ANCHOR_NONE" )
                                         CritterEmoteScanTooltip:ClearLines()
                                         CritterEmoteScanTooltip:SetUnit("target")       
-                                        text = CritterEmoteScanTooltipTextLeft2:GetText()
+                                        text = CritterEmoteScanTooltipTextLeft1:GetText()
+                                         if text then
+                                 if StrExtractCompanionOwner(text) then
+                                  text = CritterEmoteScanTooltipTextLeft2:GetText()
+                                 else
+                                  text = CritterEmoteScanTooltipTextLeft3:GetText()
+                                end
+                               end
+                                        CritterEmote_printDebug("2nd text = " .. text)
                                         if text then
                                           return StrExtractCompanionOwner(text)         
                                         else
